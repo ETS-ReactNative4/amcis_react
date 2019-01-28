@@ -1,0 +1,25 @@
+{
+  "name": "reactstory",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "storybook": "start-storybook -p 9009",
+    "build-storybook": "build-storybook"
+  },
+  "author": "K1ngdani",
+  "license": "ISC",
+  "dependencies": {
+    "google-maps-react": "^2.0.2",
+    "react-google-maps": "^9.4.5"
+  },
+  "devDependencies": {
+    "@storybook/react": "^4.1.11",
+    "@storybook/addon-actions": "^4.1.11",
+    "@storybook/addon-links": "^4.1.11",
+    "@storybook/addons": "^4.1.11",
+    "@babel/core": "^7.2.2",
+    "babel-loader": "^8.0.5"
+  }
+}
