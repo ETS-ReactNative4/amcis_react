@@ -6,6 +6,7 @@ import { linkTo } from '@storybook/addon-links';
 //import {Hello} from '../../src/components/Hello/Hello'
 import { Button, Welcome } from '@storybook/react/demo';
 import Map from '../components/Map/Map';
+import CameraComponent from '../components/Camera/Camera';
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
@@ -20,6 +21,8 @@ storiesOf('Button', module)
   ));
 
 storiesOf('Map', module).add('show Map', ()=> <Map/>);
+
+storiesOf('Camera', module).add('show Camera', ()=> <CameraComponent/>);
 
  /* const stories = storiesOf('Hello', module)
 stories.addDecorator(withKnobs)
