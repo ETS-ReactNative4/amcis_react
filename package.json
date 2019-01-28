@@ -13,6 +13,7 @@
   "dependencies": {
     "google-maps-react": "^2.0.2",
     "react-file-picker": "0.0.5",
+    "react-geolocated": "^2.4.0",
     "react-google-maps": "^9.4.5",
     "react-html5-camera-photo": "^1.2.9"
   },

@@ -8,6 +8,7 @@ import { Button, Welcome } from '@storybook/react/demo';
 import Map from '../components/Map/Map';
 import CameraComponent from '../components/Camera/Camera';
 import FileChooser from '../components/FileChooser/FileChooser';
+import GPS from '../components/GPS/GPS';
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
@@ -26,6 +27,8 @@ storiesOf('Map', module).add('show Map', ()=> <Map/>);
 storiesOf('Camera', module).add('show Camera', ()=> <CameraComponent/>);
 
 storiesOf('FileChooser', module).add('use files', () => <FileChooser/>);
+
+storiesOf('GPS', module).add('show Coordinates', ()=> <GPS/>)
 
  /* const stories = storiesOf('Hello', module)
 stories.addDecorator(withKnobs)
