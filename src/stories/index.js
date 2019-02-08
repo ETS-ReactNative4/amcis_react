@@ -24,15 +24,15 @@ storiesOf('Button', module)
     </Button>
   ));
 
-storiesOf('Map', module).add('show Map', ()=> <Map/>);
+storiesOf('map-component-react', module).add('show Map', ()=> <Map/>);
 
-storiesOf('Camera', module).add('show Camera', ()=> <CameraComponent/>);
+storiesOf('camera-component-react', module).add('show Camera', ()=> <CameraComponent/>);
 
-storiesOf('FileChooser', module).add('use files', () => <FileChooser/>);
+storiesOf('file-component-react', module).add('use files', () => <FileChooser/>);
 
-storiesOf('GPS', module).add('show Coordinates', ()=> <GPS/>);
+storiesOf('gps-component-react', module).add('show Coordinates', ()=> <GPS/>);
 
-storiesOf('SpeechRecognition', module).add('Text Output', ()=> <SpeechRecognition/>);
+storiesOf('speech-component-react', module).add('Text Output', ()=> <SpeechRecognition/>);
 
  /* const stories = storiesOf('Hello', module)
 stories.addDecorator(withKnobs)
