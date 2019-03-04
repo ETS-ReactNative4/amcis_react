@@ -1,5 +1,6 @@
 import React from 'react';
 import {geolocated} from 'react-geolocated';
+import ReactWebComponent from 'react-web-component';
 
 export class GPS extends React.Component {
     render() {
@@ -27,3 +28,4 @@ export class GPS extends React.Component {
     },
     userDecisionTimeout: 5000,
   })(GPS);
+  ReactWebComponent.create(<GPS />, 'gps-component-react');

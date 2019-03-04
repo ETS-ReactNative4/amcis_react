@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { FilePicker } from 'react-file-picker'
+import ReactWebComponent from 'react-web-component';
 
 class FileChooser extends Component {
 
@@ -17,3 +18,4 @@ render(){
   );}
 }
 export default FileChooser;
+ReactWebComponent.create(<FileChooser />, 'file-component-react');

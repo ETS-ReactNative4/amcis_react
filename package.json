@@ -8,14 +8,18 @@
     "storybook": "start-storybook -p 9009",
     "build-storybook": "build-storybook"
   },
-  "author": "K1ngdani",
+  "files": [
+    "src/components"
+  ],
+  "author": "Jan Christoph",
   "license": "ISC",
   "dependencies": {
     "google-maps-react": "^2.0.2",
     "react-file-picker": "0.0.5",
     "react-geolocated": "^2.4.0",
     "react-google-maps": "^9.4.5",
-    "react-html5-camera-photo": "^1.2.9"
+    "react-html5-camera-photo": "^1.2.9",
+    "react-web-component": "^1.3.0"
   },
   "devDependencies": {
     "@storybook/react": "^4.1.11",

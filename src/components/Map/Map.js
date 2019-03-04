@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {GoogleApiWrapper} from 'google-maps-react';
 import { withGoogleMap, GoogleMap } from 'react-google-maps';
+import ReactWebComponent from 'react-web-component';
 
 export class Map extends Component {
     render() {
@@ -25,3 +26,4 @@ export class Map extends Component {
     apiKey: ('AIzaSyDdrZBAruxVoYJSlghk3v5Nd1x64orwvs4')
   })(Map)
  //export default Map;
+ ReactWebComponent.create(<Map />, 'map-component-react');

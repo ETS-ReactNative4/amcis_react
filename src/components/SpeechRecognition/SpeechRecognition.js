@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactWebComponent from 'react-web-component';
 
 export class SpeechRecognition extends Component {
 
@@ -49,3 +50,4 @@ export class SpeechRecognition extends Component {
         );
     }
 }
+ReactWebComponent.create(<SpeechRecognition />, 'speech-component-react');
