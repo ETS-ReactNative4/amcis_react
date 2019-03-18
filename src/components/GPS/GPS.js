@@ -22,7 +22,7 @@ export class GPS extends React.Component {
     }
   }
    
-  export default geolocated({
+  export default GPS({
     positionOptions: {
       enableHighAccuracy: false,
     },
