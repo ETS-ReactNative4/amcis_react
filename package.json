@@ -1,7 +1,10 @@
 {
   "name": "amcis_react",
   "version": "2.0.0",
-  "private": true,
+  "private": false,
+   "files": [
+    "build/"
+  ],
   "dependencies": {
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
