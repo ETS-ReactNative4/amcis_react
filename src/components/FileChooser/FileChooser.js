@@ -1,19 +1,27 @@
 import React, { Component } from 'react';
-import { FilePicker } from 'react-file-picker'
 
 class FileChooser extends Component {
 
+  onInputChange(selectorFiles)
+  {
+      console.log(selectorFiles);
+  } 
+
 render(){
     return(
-    <FilePicker
-      extensions={['md']}
-      onChange={FileObject => ('')}
-      onError={errMsg => ('')}
-    >
-      <button>
-        Click to upload markdown
-      </button>
-    </FilePicker>
+    
+      <div class="image-upload">
+          <div class="image-upload__edit">
+            <label htmlFor="file"></label>
+            <input type="file" name="files[]" id="file" accept="image/*" class="image-upload__input"
+              onChange={($event) => this.onInputChange($event.target.files)} />
+          </div>
+    
+          <div class="image-upload__preview">
+            <div id="image-preview"></div>
+          </div>
+        </div>
+
   );}
 }
 export default FileChooser; 
