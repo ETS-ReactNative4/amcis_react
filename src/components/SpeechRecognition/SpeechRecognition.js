@@ -26,14 +26,19 @@ export class SpeechRecognition extends Component {
                interimTranscript += transcript;
              }
            }
-           var x = document.getElementById("myDiv");
-           x.querySelector('.label').innerHTML = finalTranscript + '<i style="color:#ddd;">' + interimTranscript + '</>';
-         }
-         console.log('recognition started');
-         recognition.start();
-     } else {
-       // speech recognition API not supported#
-       console.log('API not supported');
+           if (document.getElementById("speech-container")==null){
+            this.text = finalTranscript;    
+        }else{
+            var x = document.getElementById("speech-container");
+            x.querySelector('.label').innerHTML = finalTranscript + '<i style="color:#ddd;">' + interimTranscript + '</>';
+        }
+        
+        
+    }
+    recognition.start();
+} else {
+    // speech recognition API not supported
+
      }
     }
 
