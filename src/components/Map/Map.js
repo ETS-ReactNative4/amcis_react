@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+//import React from 'react';
 import {GoogleApiWrapper} from 'google-maps-react';
 import { withGoogleMap, GoogleMap } from 'react-google-maps';
-import ReactWebComponent from 'react-web-component';
 
-export class Map extends Component {
+
+export class Map extends HTMLElement {
     render() {
     const GoogleMapExample = withGoogleMap(props => (
        <GoogleMap
@@ -21,9 +21,18 @@ export class Map extends Component {
        </div>
     );
     }
+
+    createdCallback() {
+      ReactDom.render(
+        <div id="myDiv">
+          <br />
+          <label className="label" />
+        </div>,this
+      );
+    }
  };
  export default GoogleApiWrapper({
     apiKey: ('AIzaSyDdrZBAruxVoYJSlghk3v5Nd1x64orwvs4')
   })(Map)
  //export default Map;
- ReactWebComponent.create(<Map />, 'map-component-react');
+ customElements.define('map-component-react',Map);

@@ -1,10 +1,14 @@
 import React from 'react';
 import {geolocated} from 'react-geolocated';
-import ReactWebComponent from 'react-web-component';
 
-export class GPS extends React.Component {
+export class GPS extends HTMLElement {
     render() {
-      return !this.props.isGeolocationAvailable
+      return 
+    }
+
+    createdCallback() {
+      ReactDom.render(
+        !this.props.isGeolocationAvailable
         ? <div>Your browser does not support Geolocation</div>
         : !this.props.isGeolocationEnabled
           ? <div>Geolocation is not enabled</div>
@@ -18,14 +22,15 @@ export class GPS extends React.Component {
                 <tr><td>speed</td><td>{this.props.coords.speed}</td></tr>
               </tbody>
             </table>
-            : <div>Getting the location data&hellip; </div>;
+            : <div>Getting the location data&hellip; </div>
+      );
     }
   }
    
-  export default GPS({
+  export default geolocated({
     positionOptions: {
       enableHighAccuracy: false,
     },
     userDecisionTimeout: 5000,
   })(GPS);
-  ReactWebComponent.create(<GPS />, 'gps-component-react');
+  customElements.define('gps-component-react',GPS);

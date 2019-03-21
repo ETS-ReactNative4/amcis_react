@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { FilePicker } from 'react-file-picker'
-import ReactWebComponent from 'react-web-component';
 
-class FileChooser extends Component {
 
-render(){
-    return(
-    <FilePicker
+class FileChooser extends HTMLElement {
+
+  createdCallback() {
+    ReactDom.render(
+      <FilePicker
       extensions={['md']}
       onChange={FileObject => ('')}
       onError={errMsg => ('')}
@@ -14,8 +14,11 @@ render(){
       <button>
         Click to upload markdown
       </button>
-    </FilePicker>
-  );}
+    </FilePicker>,document.getElementById('id')
+    );
+  }
+
 }
 export default FileChooser;
-ReactWebComponent.create(<FileChooser />, 'file-component-react');
+
+customElements.define('file-component-react',FileChooser);
