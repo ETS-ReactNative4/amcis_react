@@ -3,6 +3,12 @@ import {GoogleApiWrapper} from 'google-maps-react';
 import { withGoogleMap, GoogleMap } from 'react-google-maps';
 
 export class Map extends Component {
+
+  constructor() {
+    console.log("Start map", new Date().getTime());
+    super();
+  }
+
     render() {
     const GoogleMapExample = withGoogleMap(props => (
        <GoogleMap
@@ -20,7 +26,12 @@ export class Map extends Component {
        </div>
     );
     }
+    componentDidMount(){
+      console.log("build map", new Date().getTime());
+    }
  };
+
+
  export default GoogleApiWrapper({
     apiKey: ('AIzaSyDdrZBAruxVoYJSlghk3v5Nd1x64orwvs4')
   })(Map)

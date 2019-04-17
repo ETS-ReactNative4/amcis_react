@@ -6,13 +6,14 @@
     "build/"
   ],
   "dependencies": {
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4",
-    "react-web-component-react-scripts": "1.0.12",
     "google-maps-react": "^2.0.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
     "react-geolocated": "^2.4.0",
     "react-google-maps": "^9.4.5",
-    "react-html5-camera-photo": "^1.2.9"
+    "react-html5-camera-photo": "^1.4.0",
+    "react-web-component-react-scripts": "1.0.12",
+    "webpack-dev-server": "^3.3.1"
   },
   "scripts": {
     "start": "react-scripts start",

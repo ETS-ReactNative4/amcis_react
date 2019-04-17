@@ -2,6 +2,12 @@ import React from 'react';
 import {geolocated} from 'react-geolocated';
 
 export class GPS extends React.Component {
+
+  constructor() {
+    console.log("Start gps", new Date().getTime());
+    super();
+  }
+
     render() {
       return !this.props.isGeolocationAvailable
         ? <div>Your browser does not support Geolocation</div>
@@ -18,6 +24,10 @@ export class GPS extends React.Component {
               </tbody>
             </table>
             : <div>Getting the location data&hellip; </div>;
+    }
+
+    componentDidMount() {
+      console.log("build gps", new Date().getTime());
     }
   }
 

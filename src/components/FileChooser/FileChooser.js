@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 
 class FileChooser extends Component {
 
+  constructor() {
+    console.log("Start file", new Date().getTime());
+    super();
+  }
+
   onInputChange(selectorFiles)
   {
       console.log(selectorFiles);
@@ -23,5 +28,8 @@ render(){
         </div>
 
   );}
+  componentDidMount() {
+    console.log("build file", new Date().getTime());
+  }
 }
 export default FileChooser; 

@@ -3,6 +3,12 @@ import Camera from 'react-html5-camera-photo';
 import 'react-html5-camera-photo/build/css/index.css';
 
 class CameraComponent extends Component {
+
+    constructor() {
+        console.log("Start camera", new Date().getTime());
+        super();
+      }
+    
     onTakePhoto(dataUri){
         console.log('takePhoto');
     }
@@ -14,5 +20,9 @@ class CameraComponent extends Component {
        );
         
     }
+
+    componentDidMount() {
+        console.log("build camera", new Date().getTime());
+      }
 } 
 export default CameraComponent
